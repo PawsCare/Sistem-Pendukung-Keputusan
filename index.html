@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Pendukung Keputusan - TOPSIS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-6">
+        <!-- Header -->
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-blue-600">Sistem Pendukung Keputusan</h1>
+            <h2 class="text-lg text-gray-600 mt-2">Prioritas Program Makan Siang Gratis - Metode TOPSIS</h2>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Action Buttons -->
+            <div class="flex justify-center space-x-4 mb-6">
+                <button id="clear-btn" class="px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600">Clear</button>
+                <button id="default-btn" class="px-6 py-2 bg-yellow-500 text-white rounded-lg hover:bg-yellow-600">Set to Default</button>
+                <button id="calculate-btn" class="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600">Calculate TOPSIS</button>
+            </div>
+
+            <!-- Data Table -->
+            <div class="overflow-x-auto">
+                <table id="data-table" class="min-w-full bg-white border border-gray-300 rounded-lg shadow">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="px-4 py-2 border">Alternatif</th>
+                            <th class="px-4 py-2 border">Persentase Penduduk Miskin</th>
+                            <th class="px-4 py-2 border">Garis Kemiskinan (Rupiah/Kapita/Bulan)</th>
+                            <th class="px-4 py-2 border">Jumlah Penduduk Miskin (Ribu Jiwa)</th>
+                            <th class="px-4 py-2 border">Prevalensi Stunting Menurut (Persen)</th>
+                            <th class="px-4 py-2 border">Persentase Penduduk Usia 15 Tahun ke Atas yang Buta Huruf</th>
+                            <th class="px-4 py-2 border">Akses Pendidikan (Jumlah Sekolah)</th>
+                            <th class="px-4 py-2 border">Akses Kesehatan Rumah Sakit</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <!-- Data alternatif akan diisi oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Output Results -->
+            <div id="output" class="text-center mt-8">
+                <h3 class="text-2xl font-semibold text-blue-600 mb-4">Hasil Perhitungan TOPSIS:</h3>
+                <ol id="result-list" class="list-decimal list-inside bg-white p-4 rounded-lg shadow">
+                    <!-- Hasil TOPSIS akan ditampilkan di sini -->
+                </ol>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-12 text-sm text-gray-500">
+            <p>Kelompok 14 Muh. Fajrin Bakri, Muhammad Naufal Ramadhani Alwi</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
